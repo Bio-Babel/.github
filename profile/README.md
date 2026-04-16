@@ -1,9 +1,9 @@
 <p align="center">
-  <br>
-  <b>B I O &nbsp;·&nbsp; B A B E L</b>
-  <br>
+  <img src="imgs/logo-2.png" alt="Bio-Babel" width="820">
+</p>
+
+<p align="center">
   <sub><i>An AI-assisted community stewarding the classics of bioinformatics — in more than one tongue.</i></sub>
-  <br>
 </p>
 
 <p align="center">

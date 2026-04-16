@@ -70,7 +70,7 @@ The rules we try not to break:
 
 Bio-Babel is a community as much as it is a codebase. Five ways in, in rough order of commitment:
 
-- 💡 **Nominate a library.** Open an issue on [`Bio-Babel/Bio-Babel`](https://github.com/Bio-Babel/Bio-Babel/issues) with a classic package you wish existed on the other side, and the workflow that's painful without it.
+- 💡 **Nominate a library.** Open an issue on [`Bio-Babel/.github`](https://github.com/Bio-Babel/.github/issues) with a classic package you wish existed on the other side, and the workflow that's painful without it.
 - 🐞 **Report a divergence.** If a port behaves differently from its reference, that's the most valuable bug report we can receive.
 - 🔧 **Pick up a port.** Tell us which classic you'd like to help bring over; we'll help you scope it.
 - 📖 **Port in public.** Rough drafts welcome — our pipeline assists the draft, but review and stewardship need more hands.

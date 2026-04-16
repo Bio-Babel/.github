@@ -28,7 +28,9 @@
 
 ## 📜 Why "Babel"?
 
-The punishment in the story was never **difference** — diversity of thought is a field's wealth. The punishment was that translation became impossible, and ideas that could have traveled were stranded. Bioinformatics has lived its own small version of that: a beautiful tool blooms on one side of the language line, and half the field that might have used it can't. What changed is that semantic code translation is finally **tractable** — and, more importantly, **maintainable**. Bio-Babel does that work, in the open, one classic library at a time.
+The name nods to the **Tower of Babel** — the biblical story in which humanity, once speaking a single tongue, was scattered into languages that could no longer understand one another. The punishment was never **difference** (diversity of thought is a field's wealth); it was that **translation became impossible**, and ideas that could have traveled were stranded.
+
+Bioinformatics lives its own small version of that story: a beautiful tool blooms on one side of the language line, and half the field that might have used it can't reach for it. What's changed is that semantic code translation — the real, maintainable kind — is finally tractable. **Bio-Babel is what happens when we decide not to leave those tools stranded.**
 
 ## 📚 The Libraries
 

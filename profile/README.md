@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img alt="Libraries" src="https://img.shields.io/badge/libraries-7-blueviolet?style=for-the-badge">
+  <img alt="Libraries" src="https://img.shields.io/badge/libraries-9-blueviolet?style=for-the-badge">
   <img alt="Started" src="https://img.shields.io/badge/started-Apr%202026-gold?style=for-the-badge">
   <img alt="Phase" src="https://img.shields.io/badge/phase-alpha-orange?style=for-the-badge">
   <a href="https://github.com/orgs/Bio-Babel/repositories"><img alt="Org" src="https://img.shields.io/badge/org-Bio--Babel-24292e?style=for-the-badge&logo=github"></a>
@@ -34,7 +34,7 @@ Bioinformatics lives its own small version of that story: a beautiful tool bloom
 
 ## 📚 The Libraries
 
-One worked example — the **visualization stack** — a ground-up reimplementation of R's `grid → gtable / scales → ggplot2 → ComplexHeatmap` chain, carried into pure Python on a Cairo backend. No `matplotlib`. Publication-quality output, by construction.
+One worked example — the **visualization stack** — a ground-up reimplementation of R's `grid → {gtable, scales} → ggplot2 → {pheatmap, ggrepel, ComplexHeatmap}` chain, carried into pure Python on a Cairo backend. No `matplotlib`. Publication-quality output, by construction.
 
 ```mermaid
 graph LR
@@ -42,9 +42,18 @@ graph LR
   gtable[gtable_py]  --> ggplot2
   grid[grid_py]       --> gtable
   grid                --> ggplot2
+  grid                --> pheatmap[pheatmap_py]
   grid                --> CH[ComplexHeatmap_python]
   ggplot2             --> CH
+  ggplot2             --> ggrepel[ggrepel_py]
 ```
+
+## 🔬 Downstream example: `monocle2-python`
+
+[`monocle2-python`](https://github.com/Bio-Babel/Monocle2-python) — a port of R's single-cell trajectory toolkit — builds its **entire visualization layer on the Bio-Babel stack**. No `matplotlib`, no `seaborn`. Two wins:
+
+- **Pixel-close R-visual fidelity.** `plot_cell_trajectory`, branched BEAM heatmaps, pseudotime curves render like the R tutorials without adapter code.
+- **Cleaner AI workflow.** Staying inside one lineage (R's `grid → ggplot2`) gives an AI agent a single, self-consistent API to reason about — fewer guesses, fewer hallucinations, lighter review.
 
 Beyond this one example, our focus is the **interface between bioinformatics and computation** — creating and maintaining **standardized, language-shared, high-quality libraries** that the field can reach for no matter which language it happens to be working in. More classics will follow as the community nominates them. The full, live catalog lives on the [🏠 organization page](https://github.com/orgs/Bio-Babel/repositories).
 

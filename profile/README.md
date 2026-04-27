@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img alt="Libraries" src="https://img.shields.io/badge/libraries-9-blueviolet?style=for-the-badge">
+  <img alt="Libraries" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Forgs%2FBio-Babel&query=%24.public_repos&label=libraries&color=blueviolet&style=for-the-badge">
   <img alt="Started" src="https://img.shields.io/badge/started-Apr%202026-gold?style=for-the-badge">
   <img alt="Phase" src="https://img.shields.io/badge/phase-alpha-orange?style=for-the-badge">
   <a href="https://github.com/orgs/Bio-Babel/repositories"><img alt="Org" src="https://img.shields.io/badge/org-Bio--Babel-24292e?style=for-the-badge&logo=github"></a>
@@ -34,18 +34,24 @@ Bioinformatics lives its own small version of that story: a beautiful tool bloom
 
 ## 📚 The Libraries
 
-One worked example — the **visualization stack** — a ground-up reimplementation of R's `grid → {gtable, scales} → ggplot2 → {pheatmap, ggrepel, ComplexHeatmap}` chain, carried into pure Python on a Cairo backend. No `matplotlib`. Publication-quality output, by construction.
+One worked example — the **visualization stack** — a ground-up reimplementation of R's `grid → {gtable, scales} → ggplot2` chain and its downstream `{pheatmap, ggrepel, ComplexHeatmap, patchwork}`, carried into pure Python on a Cairo backend. No `matplotlib`. Publication-quality output, by construction.
 
 ```mermaid
 graph LR
-  scales[scales_py] --> ggplot2[ggplot2_py]
-  gtable[gtable_py]  --> ggplot2
-  grid[grid_py]       --> gtable
-  grid                --> ggplot2
-  grid                --> pheatmap[pheatmap_py]
-  grid                --> CH[ComplexHeatmap_python]
-  ggplot2             --> CH
-  ggplot2             --> ggrepel[ggrepel_py]
+  grid[grid_py]      --> gtable[gtable_py]
+  grid               --> ggplot2[ggplot2_py]
+  grid               --> pheatmap[pheatmap_py]
+  grid               --> CH[ComplexHeatmap_python]
+  grid               --> ggrepel[ggrepel_py]
+  grid               --> patchwork[patchwork_py]
+  scales[scales_py]  --> ggplot2
+  scales             --> pheatmap
+  scales             --> ggrepel
+  gtable             --> ggplot2
+  gtable             --> pheatmap
+  gtable             --> patchwork
+  ggplot2            --> ggrepel
+  ggplot2            --> patchwork
 ```
 
 ## 🔬 Downstream example: `monocle2-python`
